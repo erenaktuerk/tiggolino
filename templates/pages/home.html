@@ -1,0 +1,239 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Welcome to Tiggolino{% endblock title %}
+{% block cssfiles %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}"/>
+
+{% endblock cssfiles %}
+
+
+{% block content %}
+    <div class="home-intro" id="homeintro" style="background-image:url({% static 'img/tiggo.png'%})">
+      <div class="innerfilter">
+        <h1 id="h211">Have fun all day long!</h1>
+      </div>
+    </div>
+   
+    <div class="home-about">
+      <div class="overline">About us.</div>
+      <h2>Sorglos spielen.</h2>
+      <div class="columns2">
+        <div class="col2 fade" id="d282">
+          <h3>A place for friends and families.</h3>
+          <p>
+            Die schönsten Erinnerungen sind die, die wir mit unseren liebsten Freunden und Familie erleben. Wir haben genau dafür einen wundervollen Platz geschaffen.
+          </p>
+        </div>
+        <div class="col3 fade" id="d28w2">
+          <h3>This is a non stop action house.</h3>
+          <p>
+            Entdecke gemeinsam mit deinen Freunden unsere spannenden Anlagen.
+          </p>
+        </div>
+        <div class="col4 fade" id="dwqqq82">
+          <h3>Familienfreundliches Ambiente.</h3>
+          <p>
+            Wir haben uns auf Familien und große Gruppen spezialisiert. Auf euch wartet leckeres Essen, ausreichend Platz und natürlich pflegen wir hohe Sicherheits- und Hygienestandards. 
+          </p>
+        </div>
+        <div class="col5 pic" style="background-image:url({% static 'img/monkeyape.png'%})"></div>
+      </div>
+    </div>
+
+
+    <div class="home-gal">
+      <div class="home-gal-grid">
+        <div class="homga homeg txthome">
+          <h2>Entdecke das Kind in dir.</h2>
+          <p>Egal ob 4 Jahre, 10 Jahre, 16 Jahre oder 36 Jahre. Alle haben Spaß an unseren tollen Anlagen und Spielen. Es gibt Bereiche die auf jüngere Altersgruppen speziallisiert sind, andere wie die Trampolin Area ziehen auch ältere magisch an.</p>
+        </div>
+        <div class="homgb homeg" style="background-image:url({% static 'img/kidsplay.jpg'%})"></div>
+        <div class="homgc homeg" style="background-image:url({% static 'img/t12.jpg'%})"></div>
+        <div class="homgd homeg txthome">
+          <h2>Spaß bei jedem Wetter.</h2>
+          <p>Dank unserer modernen Anlage, können wir sowohl im Hochsommer, als auch im Winter, angenehme Temparaturen garantieren. Gerade im Sommer, öffnen wir unser Dach. Das Spieleerlebnis wird dann unter einem blauen sonnigen Himmel noch schöner.</p>
+        </div>
+        <div class="homge homeg txthome">
+          <h2>Besondere Tage muss man im Tiggolino feiern.</h2>
+          <p>Wir sind spazialisiert auf Events wie Geburtstage, Schulausflüge und jede andere größere Feier. Unsere Räumlichkeiten bieten euch genügend Platz, leckeres Essen und eine perfekte Sicht auf den Anlagenbereich. Damit ihr zu jeder Zeit alles im Blick habt.</p>
+        </div>
+        <div class="homgf homeg" style="background-image:url({% static 'img/t5.jpg'%})"></div>
+      </div>
+    </div>
+
+    <div class="home-gastro">
+      <div class="hgastro-grid">
+        <div class="hga gasgrid">
+          <div class="overline" id="gastrooverline">GASTRONOMIE</div>
+          <h2>You will need Energy for playing.</h2>
+          <p>Bei uns gibt es tolle Essen und Verpflegungsmöglichkeiten, bei dem für jeden etwas dabei ist. Wir freuen uns auf dich.</p>
+        </div>
+        <div class="hgb gasgrid" style="background-image:url({% static 'img/monkeytiger.png'%})"></div>
+        <div class="hgc gasgrid">
+          <div class="symitem" style="background-image:url({% static 'img/pommes.png'%})"></div>
+          <h3>Snacks & Fingerfood</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum
+            quasi quis doloribus quia illum laudantium.</p>
+        </div>
+        <div class="hgd gasgrid">
+          <div class="symitem" style="background-image:url({% static 'img/pizza.png'%})"></div>
+          <h3>Hamburger</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum
+            quasi quis doloribus quia illum laudantium.</p>
+        </div>
+        <div class="hge gasgrid">
+          <div class="symitem" style="background-image:url({% static 'img/coffee.png'%})"></div>
+          <h3>Getränke</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum
+            quasi quis doloribus quia illum laudantium.</p>
+        </div>
+        <div class="hgf gasgrid mrgntop">
+          <a href="{% url 'pages:gastro'%}" class="regularbtn" class="learnmorebutton">Learn more >></a>
+        </div>
+
+      </div>
+    </div>
+
+    
+  <script src="{% static 'js/observer.js' %}"></script>
+{% endblock content %}
+{% block jsfiles %}
+  <script>
+      gsap.registerPlugin(ScrollTrigger);
+      ScrollTrigger.defaults({
+      toggleActions: "restart none none none",
+      });   
+  
+      // This is the YumaBag Text here
+      gsap.from("#h211", {
+          scrollTrigger: "#homeintro",
+          toggleActions: "restart none none none",
+          duration: 1.2,
+          x: 220,
+          opacity:0,
+          ease:"ease.in"
+      });
+
+      gsap.from("#d282", {
+        scrollTrigger: "#columns2",
+        toggleActions: "restart none none none",
+        duration: 0.8,
+        x: 420,
+        opacity:0,
+        ease:"ease.in"
+    });
+
+    gsap.from("#d28w2", {
+      scrollTrigger: "#columns2",
+      toggleActions: "restart none none none",
+      duration: 1.2,
+      x: 220,
+      opacity:0,
+      ease:"ease.in"
+  });
+
+  gsap.from("#dwqqq82", {
+    scrollTrigger: "#columns2",
+    toggleActions: "restart none none none",
+    duration: 0.92,
+    x: -220,
+    opacity:0,
+    ease:"ease.in"
+});
+
+//picture block
+gsap.from(".homga", {
+  scrollTrigger: ".homga",
+  toggleActions: "restart none none none",
+  duration: 0.92,
+  x: -220,
+  opacity:0,
+  ease:"ease.in"
+});
+gsap.from(".homgb", {
+  scrollTrigger: ".homgb",
+  toggleActions: "restart none none none",
+  duration: 0.52,
+  x: 320,
+  opacity:0,
+  ease:"ease.in"
+});
+gsap.from(".homgc", {
+  scrollTrigger: ".homgc",
+  toggleActions: "restart none none none",
+  duration: 0.72,
+  x: -420,
+  opacity:0,
+  ease:"ease.in"
+});
+
+
+gsap.from(".homgd", {
+  scrollTrigger: ".homgd",
+  toggleActions: "restart none none none",
+  duration: 0.72,
+  x: 420,
+  opacity:0,
+  ease:"ease.in"
+});
+gsap.from(".homge", {
+  scrollTrigger: ".homge",
+  toggleActions: "restart none none none",
+  duration: 1.1,
+  x: -320,
+  opacity:0,
+  ease:"ease.in"
+});
+
+gsap.from(".homgf", {
+  scrollTrigger: ".homgf",
+  toggleActions: "restart none none none",
+  duration: 0.8,
+  delay:1,
+  x: 320,
+  opacity:0,
+  ease:"ease.in"
+});
+
+
+gsap.from(".hgb", {
+  scrollTrigger: ".hgb",
+  toggleActions: "restart none none none",
+  duration: 0.6,
+  delay:1,
+  x: 420,
+  opacity:0,
+  ease:"ease.in"
+});
+gsap.from(".hgc", {
+  scrollTrigger: ".hgc",
+  toggleActions: "restart none none none",
+  duration: 0.7,
+  delay:1,
+  x: -320,
+  opacity:0,
+  ease:"ease.in"
+});
+gsap.from(".hgd", {
+  scrollTrigger: ".hgd",
+  toggleActions: "restart none none none",
+  duration: 0.8,
+  delay:1,
+  x: -320,
+  opacity:0,
+  ease:"ease.in"
+});
+
+gsap.from(".hge", {
+  scrollTrigger: ".hge",
+  toggleActions: "restart none none none",
+  duration: 0.8,
+  delay:1,
+  x: 320,
+  opacity:0,
+  ease:"ease.in"
+});
+
+  </script>
+{% endblock jsfiles %}

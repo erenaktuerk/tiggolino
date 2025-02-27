@@ -1,0 +1,314 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.prices-intro {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.innerfilter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(180deg, black, transparent, transparent);
+    padding: 100px 0px;
+    height: 600px;
+
+
+
+}
+
+.prices-intro h1 {
+    font-size: 4em;
+    color: white;
+}
+
+.regularprices {
+    height: auto;
+    padding: 120px 0px;
+    width: 100%;
+}
+
+
+
+
+
+.blacked {
+    background-color: black;
+}
+
+.whited {
+    background-color: white;
+}
+
+
+
+.reg-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-rows: 100px 440px 220px;
+    grid-template-areas:
+        "pricetitleline pricetitleline pricetitleline"
+        "pkids perw pseni"
+        "happyhour happyhour happyhour";
+}
+
+
+.pricetitleline {
+    grid-area: pricetitleline;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.pricetitleline h1 {
+    font-weight: 400;
+}
+
+.priceitem {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.pricedesc {
+    color: darkgray;
+    font-size: 0.9em;
+}
+
+.pricegroup {
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.price-amount {
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+
+.gridprices {
+    margin: 5px;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.symbolprice {
+    width: 45px;
+    height: 45px;
+    margin-top: 30px;
+}
+
+.pkids {
+    grid-area: pkids;
+}
+
+.perw {
+    grid-area: perw;
+}
+
+.pseni {
+    grid-area: pseni;
+}
+
+.happyhour {
+    grid-area: happyhour;
+    padding-bottom: 20px;
+}
+
+.pricedesc2 {
+    max-width: 300px;
+    line-height: 1.2em;
+}
+
+.comprimized {
+    max-width: 400px;
+}
+
+.specials {
+    height: auto;
+    width: 100%;
+    background-color: #f7f7f7;
+
+}
+
+
+.spec p {
+    max-width: 80%;
+    text-align: center;
+}
+
+.specials-grid {
+    padding: 120px 0px;
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-rows: 80px 450px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "specoverline specoverline specoverline"
+        "motherday f1day fatherday";
+
+}
+
+.specoverline {
+    grid-area: specoverline;
+}
+
+.motherday {
+    grid-area: motherday;
+}
+
+.f1day {
+    grid-area: f1day;
+}
+
+.fatherday {
+    grid-area: fatherday;
+}
+
+.spec {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+
+}
+
+.specpic {
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.whichday {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.8em;
+    color: darkgray;
+}
+
+.openings {
+    height: auto;
+    background-color: #181818;
+    width: 100%;
+    color: white;
+}
+
+.openingtableregular {
+    max-width: 920px;
+    padding: 120px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dayitem {
+    margin-top: 15px;
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+@media screen and (max-width: 940px) {
+
+
+    .reg-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-rows: 100px 360px 360px 250px;
+        grid-template-areas:
+            "pricetitleline  pricetitleline"
+            "pkids pkids"
+            "perw pseni"
+            "happyhour happyhour";
+    }
+
+    .specials-grid {
+        max-width: 90%;
+
+        grid-template-rows: 80px 450px 450px 450px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "specoverline"
+            "motherday"
+            "f1day"
+            "fatherday";
+    }
+
+    .spec h3 {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 780px) {
+
+    .spec h3 {
+        font-size: 1.2em;
+    }
+
+    .reg-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-rows: 100px 360px 360px 360px 250px;
+        grid-template-areas:
+            "pricetitleline"
+            "pkids"
+            "perw"
+            "pseni"
+            "happyhour";
+    }
+}

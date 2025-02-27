@@ -1,0 +1,384 @@
+.home-intro {
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 0;
+    width: 100%;
+    height: auto;
+}
+
+.innerfilter {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, black, transparent, transparent, transparent);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 480px;
+
+}
+
+
+.home-intro h1 {
+    font-size: 3em;
+    margin: 30px;
+    font-weight: 800;
+    color: #496CFF;
+    background: -webkit-linear-gradient(20deg, white, #FFD8F4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
+.home-about {
+    padding: 120px 0;
+    height: auto;
+    max-width: 920px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.more-stuff-grid {
+    background: #f4f4f4;
+    padding: 4em 0;
+    display: grid;
+    grid-gap: 2em;
+    align-items: center;
+    grid-template-columns: minmax(1em, 1fr) repeat(2, minmax(200px, 400px)) minmax(1em, 1fr);
+}
+
+.columns {
+    display: flex;
+}
+
+.home-about h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+
+}
+
+.home-about h3 {
+    font-weight: 600;
+
+}
+
+#i23 {
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+    object-position: center;
+}
+
+.home-about p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.overline {
+    font-size: 0.7em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: darkgray;
+}
+
+#gastrooverline {}
+
+.home-gal {
+    height: auto;
+    background-color: #f7f7f7;
+}
+
+.hga {
+    margin: 20px;
+    padding: 20px;
+}
+
+.hga h2 {
+    font-size: 2.8em;
+    max-width: 68%;
+    line-height: 1.1em;
+    font-weight: 800;
+}
+
+.hga p {
+    max-width: 88%;
+    font-size: 1.2em;
+}
+
+.home-gal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 0;
+    grid-template-rows: 380px 380px 380px;
+    grid-template-areas:
+        "homga homgb"
+        "homgc homgd"
+        "homge homgf";
+
+}
+
+.homga {
+    grid-area: homga;
+}
+
+.homgb {
+    grid-area: homgb;
+}
+
+.homgc {
+    grid-area: homgc;
+}
+
+.homgd {
+    grid-area: homgd;
+}
+
+.homge {
+    grid-area: homge;
+}
+
+.homgf {
+    grid-area: homgf;
+}
+
+
+
+
+
+
+
+
+
+.homeg {
+    padding: 20px;
+    margin: 30px 0px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hgastro-grid {
+    display: grid;
+    max-width: 920px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 120px 0;
+    grid-template-rows: 380px 380px 80px;
+    grid-template-areas:
+        "hga hga hgb"
+        "hgc hgd hge"
+        "hgf hgf hgf";
+
+}
+
+
+
+.symitem {
+    height: 62px;
+    width: 62px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.gasgrid {
+    display: flex;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    flex-direction: column;
+    margin: 10px;
+}
+
+.hge,
+.hgd,
+.hgc {
+    align-items: center;
+    text-align: center;
+}
+
+.hge p,
+.hgd p,
+.hgc p {
+    font-size: 0.9em;
+}
+
+.hga {
+    grid-area: hga;
+}
+
+.hgb {
+    grid-area: hgb;
+}
+
+.hgc {
+    grid-area: hgc;
+}
+
+.hgd {
+    grid-area: hgd;
+}
+
+.hge {
+    grid-area: hge;
+}
+
+
+.hgf {
+    grid-area: hgf;
+    align-items: center;
+}
+
+.columns2 {
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:
+        "300px 130px";
+    grid-template-areas:
+        "col2 col3 col4"
+        "col5 col5 col5";
+
+
+}
+
+.fade {
+    margin: 10px;
+    padding: 10px;
+}
+
+.col3 {
+    grid-area: col3;
+}
+
+.col4 {
+    grid-area: col4;
+}
+
+.col5 {
+    grid-area: col5;
+}
+
+.pic {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+
+@media(max-width:780px) {
+
+    .home-intro h1 {
+        font-size: 2.3em;
+        margin: 50px;
+
+    }
+
+    .columns2 {
+        grid-template-columns: 1fr;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-rows:
+            auto auto auto 120px;
+        grid-template-areas:
+            "col2"
+            "col3"
+            "col4"
+            "col5";
+    }
+
+    .home-gal-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding: 30px 0px;
+        padding-bottom: 0px;
+        grid-template-rows: 300px 380px 300px 380px 300px 380px;
+        grid-template-areas:
+            "homga"
+            "homgb"
+            "homgd"
+            "homgc"
+            "homge"
+            "homgf";
+    }
+
+
+
+    .hgastro-grid {
+        display: grid;
+        max-width: 920px;
+        grid-template-columns: 1fr;
+
+        grid-template-rows: 200px auto auto auto auto auto;
+        grid-template-areas:
+            "hgb"
+            "hga"
+            "hgc"
+            "hgd"
+            "hge"
+            "hgf";
+
+    }
+
+
+
+    .fade {
+        margin: 20px;
+    }
+
+    .home-about {
+        margin: 20px;
+    }
+
+    .homeg {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .homeg p {
+        max-width: 88%;
+        text-align: center;
+    }
+
+    .homeg h2 {
+        text-align: center;
+        max-width: 80%;
+    }
+
+    .txthome {
+        padding-bottom: 30px;
+    }
+
+    .gasgrid {
+        margin-bottom: 30px;
+    }
+
+    .gasgrid p {
+        max-width: 78%;
+    }
+
+
+}

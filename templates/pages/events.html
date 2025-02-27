@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Tiggolino prices{% endblock title %}
+{% block cssfiles %}
+    <link rel="stylesheet" href="{% static 'css/events.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}"/>
+{% endblock cssfiles %}
+
+{% block content %}
+    <div class="events-intro" style="background-image:url({% static 'img/birthday.jpg'%})">
+        <h1>The most beautiful days.</h1>
+    </div>
+    <div class="eventkinds">
+        <div class="event-kind-grid">
+            <div class="ekub">
+                <h1>Lorem Ipsume</h1>
+                <p>Eu du di dbcnub fh djez dage. Lorem ipsum eu di zun. Eu du di dbcnub fh djez d Lorem ipsum eu di zun. Eu du di dbcnub fh djez d.Lorem ipsum eu di zun. Eu du di dbcnub f. Lorem ipsum eu di zun. Eu du di dbcnub fh djez d.</p>
+            </div>
+            <div class="ek1 event">
+                <div class="eventpicsmall" style="background-image:url({% static 'img/bday.png'%})"></div>
+                <h2>Birthday Party's.</h2>
+                <p>Lorem ipsum eu di zun. Eu du di dbcnub fh djez dage. Eu du di dbcnub fh djez dage</p>
+
+            </div>
+            <div class="ek2 event">
+                <div class="eventpicsmall" style="background-image:url({% static 'img/jungefrau.png'%})"></div>
+                <h2>For school's and kindergardens.</h2>
+                <p>Lorem ipsum eu di zun. Eu du di dbcnub fh djez dage. Eu du di dbcnub fh djez dage</p>
+            </div>
+            <div class="ek3">
+                <a href="{% url 'pages:contact' %}" class="regularbtn mrgntop">Contact us >></a>
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock content %}
+
+{% block jsfiles %}
+<script src="{% static 'js/observerEvents.js'%}"></script>
+{% endblock jsfiles %}

@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Tiggolino contact{% endblock title %}
+{% block cssfiles %}
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}"/>
+{% endblock cssfiles %}
+
+{% block content %}
+    <div class="ankercont"></div>
+    <div class="contact-intro" style="background-image:url({% static 'img/t11.jpg'%})"></div>
+    <div class="contact-content">
+        <div class="innercont">
+            <form method="post" action="{% url 'pages:contact' %}">
+                {% csrf_token %}
+                <div class="grid-contact">
+                    <div class="telbox"></div>
+                    <div class="adressbox" id="map">
+
+                    </div>
+                    <div class="formgrid">
+                        <h1>Contact us</h1>
+                        <div class="fa">
+                            <div class="fielditem">
+                                <div class="fieldlabel">
+                                    {{form.firstname.label}}
+                                </div>
+                                <div class="fieldinput">
+                                    {{form.firstname}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fb">
+                            <div class="fielditem">
+                                <div class="fieldlabel">
+                                    {{form.lastname.label}}
+                                </div>
+                                <div class="fieldinput">
+                                    {{form.lastname}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fc">
+                            <div class="fielditem">
+                                <div class="fieldlabel">
+                                    {{form.email.label}}
+                                </div>
+                                <div class="fieldinput">
+                                    {{form.email}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fd">
+                            <div class="fielditem">
+                                <div class="fieldlabel">
+                                    {{form.tel.label}}
+                                </div>
+                                <div class="fieldinput">
+                                    {{form.tel}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fe">
+                            <div class="fielditem" id="message">
+                                <div class="fieldlabel">
+                                    {{form.message.label}}
+                                </div>
+                                <div class="fieldinput">
+                                    {{form.message}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ff">
+                            <input type="submit" value="Abschicken" class="sendbtn"/>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                
+            </form>
+        </div>
+    </div>
+
+{% endblock content %}
+
+{% block jsfiles %}
+    <script>
+        const header = document.querySelector("header");
+        header.classList.add("nav-scrolled");
+    </script>
+    <script>
+        var map;
+        function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 49.983312, lng: 8.584688},
+            zoom: 14
+          });
+        }
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJR39HsSe-0tM_bcLIFTdhoH3DNUlAiWQ&callback=initMap"
+      async defer></script>
+{% endblock jsfiles %}

@@ -1,0 +1,177 @@
+.events-intro {
+    height: auto;
+    width: 100%;
+    padding: 120px 0px;
+    height: 500px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.eventkinds {
+    height: auto;
+    background-color: #f7f7f7;
+}
+
+.event-kind-grid {
+    display: grid;
+    padding: 100px 0px;
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 500px 70px;
+    grid-template-areas:
+        "ekub ekub"
+        "ek1 ek2"
+        "ek3 ek3";
+}
+
+.ekub {
+    grid-area: ekub;
+    padding: 10px;
+    margin: 10px;
+}
+
+.ek1 {
+    grid-area: ek1;
+}
+
+.ek2 {
+    grid-area: ek2;
+}
+
+.ek3 {
+    grid-area: ek3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.event {
+    background-color: white;
+    padding: 15px;
+    margin: 10px;
+}
+
+.event h2 {
+    font-weight: 600;
+    margin: 10px;
+    margin-top: 20px;
+
+}
+
+.event p {
+    color: #4D4D4D;
+
+}
+
+
+.eventpicsmall {
+    height: 270px;
+    width: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.event p {
+    margin: 10px;
+    font-size: 0.9em;
+    line-height: 1.6em;
+    max-width: 80%;
+
+
+}
+
+.ekub {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ekub p {
+    max-width: 80%;
+}
+
+.ekub h1 {
+    max-width: 70%;
+    line-height: 1.2em;
+    font-weight: 800;
+    font-size: 2.8em;
+    text-align: center;
+}
+
+.ekub p {
+    font-size: 1.2em;
+    max-width: 85%;
+    text-align: center;
+
+
+}
+
+
+@media screen and (max-width: 930px) {
+
+    .event-kind-grid {
+        padding: 70px 0px;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 450px 450px 70px;
+        grid-template-areas:
+            "ekub"
+            "ek1"
+            "ek2"
+            "ek3";
+    }
+
+    .ekub p {
+        max-width: 80%;
+    }
+
+    .ekub h1 {
+        max-width: 76%;
+        line-height: 1.2em;
+        font-weight: 800;
+    }
+
+    .event h2 {
+        font-size: 1.3em;
+    }
+
+    .event p {
+        font-size: 1em;
+        line-height: 1.6em;
+    }
+
+}
+
+@media screen and (max-width: 780px) {
+
+
+
+    .ekub h1 {
+
+        font-size: 2.2em;
+    }
+
+    .ekub p {
+        font-size: 1em;
+
+
+    }
+
+
+}

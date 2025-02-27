@@ -1,0 +1,135 @@
+.contact-intro {
+    height: 430px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ankercont {
+    height: 180px;
+    width: 100%;
+}
+
+.contact-content {
+    height: auto;
+    width: 100%;
+}
+
+.contact-content h1 {
+    font-size: 2em;
+    font-weight: 400;
+    text-align: center;
+
+
+}
+
+.grid-contact {
+    height: auto;
+    display: grid;
+    max-width: 1100px;
+    padding: 120px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "formgrid telbox"
+        "formgrid adressbox";
+}
+
+.formgrid {
+    grid-area: formgrid;
+}
+
+.telbox {
+    grid-area: telbox;
+    background-color: #f7f7f7;
+    margin: 10px;
+
+}
+
+
+.adressbox {
+    grid-area: adressbox;
+    background-color: #f7f7f7;
+    margin: 10px;
+}
+
+
+.formgrid {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 120px;
+
+}
+
+
+
+.fielditem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+
+.fieldlabel {
+    color: #6C6C6C;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.fielditem input {
+    width: 260px;
+    height: 24px;
+    border: 1px solid #EAEAEA;
+    border-radius: 13px;
+    padding: 10px;
+
+}
+
+#message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+
+}
+
+.sendbtn {
+    width: 260px;
+    height: 44px;
+    background-color: black;
+    color: white;
+    border: 0px;
+    border-radius: 180px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+
+
+@media(max-width:780px) {
+    .grid-contact {
+        max-width: 90%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 450px 400px;
+        grid-template-areas:
+            "formgrid"
+            "telbox"
+            "adressbox";
+    }
+
+}

@@ -1,0 +1,158 @@
+.aboutus-intro {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.innerfilter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(180deg, black, transparent, transparent);
+    padding: 100px 0px;
+    height: 600px;
+
+}
+
+.innerfilter h1 {
+    font-size: 5em;
+    color: white;
+    font-family: 'Water Brush', cursive;
+}
+
+
+.gastro-grid {
+    display: grid;
+    padding: 120px 0px;
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 460px 460px 460px;
+    grid-template-areas:
+        "gb1 gb1"
+        "gb2 gb3"
+        "gb4 gb5"
+        "gb6 gb6";
+}
+
+.gastro-box {
+    height: auto;
+    background-color: #f7f7f7;
+}
+
+.gb1 {
+    grid-area: gb1;
+}
+
+.gb2 {
+    grid-area: gb2;
+}
+
+.gb3 {
+    grid-area: gb3;
+}
+
+.gb4 {
+    grid-area: gb4;
+}
+
+.gb5 {
+    grid-area: gb5;
+}
+
+.gb6 {
+    grid-area: gb6;
+}
+
+.gbox {
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    margin: 5px;
+    box-shadow: 1px 1px 7px #eaeaea;
+}
+
+.gb1 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.7em;
+}
+
+.fooditem {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+
+.fooditemname {
+    font-size: 0.9em;
+    max-width: 350px;
+    color: darkgray;
+}
+
+.foodprice {
+    font-size: 0.9em;
+
+}
+
+.areapic {
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gb1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 940px) {
+    .gastro-grid {
+        max-width: 90%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 440px 440px 440px 440px 440px;
+        grid-template-areas:
+            "gb1"
+            "gb2"
+            "gb3"
+            "gb4"
+            "gb5"
+            "gb6";
+    }
+
+    .gb1 h1 {
+        font-size: 1.3em;
+        max-width: 80%;
+        line-height: 1.2em;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 780px) {}

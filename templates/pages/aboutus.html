@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About us{% endblock title %}
+{% block cssfiles %}
+    <link rel="stylesheet" href="{% static 'css/aboutus.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+{% endblock cssfiles %}
+
+{% block content %}
+    <div class="aboutus-intro" style="background-image:url({% static 'img/t300.jpeg'%})">
+        <div class="innerfilter">
+            <h1>For the coolest kids in town.</h1>
+        </div>
+    </div>
+    <div class="aubox">
+        <div class="aboutusgrid">
+            <div class="au1 ag">
+                <h1>Lorem Ipsum.</h1>
+                <p>Thd fhh du fj szddh zf g zdz dh t fzf bcbcgdhdh djfhfduhdd fjfh udh d ddjd dkd jhdjhfd dg djgevddjdkd fdbdjbd. Hdgs hd dt ddm d, dz dkd ze d gdgdhezd h dhdhe sgddg dhdggft d dtdge dj dfjhgdd.</p>
+                <a href="#" class="smalllink">Mehr erfahren >></a>
+            </div>
+            <div class="au2 ag" style="background-image:url({% static 'img/kids3.jpeg'%})"></div>
+            <div class="au3 ag" style="background-image:url({% static 'img/t200.jpeg'%})">
+
+                
+            </div>
+            <div class="au4 ag">
+                <h1>Lorem Ipsum.</h1>
+                <p>Thd fhh du fj szddh zf g zdz dh t fzf bcbcgdhdh djfhfduhdd fjfh udh d ddjd dkd jhdjhfd dg djgevddjdkd fdbdjbd. Hdgs hd dt ddm d, dz dkd ze d gdgdhezd h dhdhe sgddg dhdggft d dtdge dj dfjhgdd.</p>
+                <a href="#" class="smalllink">Mehr erfahren >></a>
+            </div>
+            <div class="au5 ag">
+                <h1>Lorem Ipsum.</h1>
+                <p>Thd fhh du fj szddh zf g zdz dh t fzf bcbcgdhdh djfhfduhdd fjfh udh d ddjd dkd jhdjhfd dg djgevddjdkd fdbdjbd. Hdgs hd dt ddm d, dz dkd ze d gdgdhezd h dhdhe sgddg dhdggft d dtdge dj dfjhgdd.</p>
+                <a href="#" class="smalllink">Mehr erfahren >></a>
+            </div>
+            <div class="au6 ag" style="background-image:url({% static 'img/t500.jpeg'%})"></div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Our Attractions</h1>
+        <div class="horizontal-scroll">
+            <button class="btn-scroll" id="btn-scroll-left" onclick="scrollHorizontally(1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="btn-scroll" id="btn-scroll-right" onclick="scrollHorizontally(-1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="story-container">
+                <div class="story-circle">
+                    <img src="{% static 'img/t9.jpg' %}"/>
+                </div>
+                <div class="story-circle">
+                    <img src="{% static 'img/t10.jpg' %}"/>
+                </div>
+                <div class="story-circle">
+                    <img src="{% static 'img/t11.jpg' %}"/>
+                </div>
+                <div class="story-circle">
+                    <img src="{% static 'img/t12.jpg' %}"/>
+                </div>
+                <div class="story-circle">
+                    <img src="{% static 'img/t13.jpg' %}"/>
+                </div>
+                <div class="story-circle">
+                    <img src="{% static 'img/t1.jpg' %}"/>
+                </div>
+                <div class="story-circle">
+                    <img src="{% static 'img/t2.jpg' %}"/>
+                </div>
+                <div class="story-circle">
+                    <img src="{% static 'img/t3.jpg' %}"/>
+                </div>
+                <div class="story-circle">
+                    <img src="{% static 'img/t4.jpg' %}"/>
+                </div>
+                <div class="story-circle">
+                    <img src="{% static 'img/t5.jpg' %}"/>
+                </div>
+                <div class="story-circle">
+                    <img src="{% static 'img/t6.jpg' %}"/>
+                </div>
+                <div class="story-circle">
+                    <img src="{% static 'img/t7.jpg' %}"/>
+                </div>
+                <div class="story-circle">
+                    <img src="{% static 'img/t8.jpg' %}"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock content %}
+
+{% block jsfiles %}
+    <script src="{% static 'js/observerAboutus.js' %}"></script>
+    <script>
+
+        let currentScrollPosition = 0;
+        let scrollAmount = 420;
+
+        const sCont = document.querySelector(".story-container");
+        const hScroll = document.querySelector(".horizontal-scroll");
+
+        const btnScrollLeft = document.querySelector("#btn-scroll-left");
+        const btnScrollRight = document.querySelector("#btn-scroll-right");
+
+        btnScrollLeft.style.opacity = "0";
+        
+        let maxScroll = -sCont.offsetWidth + hScroll.offsetWidth;
+
+        function scrollHorizontally(val){
+            currentScrollPosition += (val * scrollAmount);
+            if(currentScrollPosition > 0 ){
+                currentScrollPosition = 0
+                btnScrollLeft.style.opacity = "0";
+            }else{
+                btnScrollLeft.style.opacity="1";
+            }
+            if(currentScrollPosition < maxScroll){
+                currentScrollPosition = maxScroll;
+                btnScrollRight.style.opacity = "0";
+            }else{
+                btnScrollRight.style.opacity = "1";
+            }
+            sCont.style.left = currentScrollPosition + "px";
+        }
+    </script>
+{% endblock jsfiles %}

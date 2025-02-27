@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Tiggolino prices{% endblock title %}
+{% block cssfiles %}
+    <link rel="stylesheet" href="{% static 'css/prices.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}"/>
+{% endblock cssfiles %}
+
+{% block content %}
+<div class="prices-intro" style="background-image:url({% static 'img/kids.jpeg'%})">
+    <div class="innerfilter">
+        <h1>Enjoy.</h1>
+    </div>
+</div>
+<div class="regularprices">
+    <div class="reg-grid">
+        <div class="pricetitleline">
+            <h1>Prices</h1>
+        </div>
+        <div class="pkids gridprices">
+            <div class="symbolprice"></div>
+            <div class="pricegroup">Kids</div>
+            <div class="priceitem">
+                <div class="pricedesc">Bis 1 Jahr</div>
+                <div class="price-amount">frei</div>
+            </div>
+            <div class="priceitem">
+                <div class="pricedesc">1-2 Jahre</div>
+                <div class="price-amount">5,90 €</div>
+            </div>
+            <div class="priceitem">
+                <div class="pricedesc">3-14 Jahre</div>
+                <div class="price-amount">9,90 €</div>
+            </div>
+        </div>
+        <div class="perw gridprices">
+            <div class="symbolprice"></div>
+            <div class="pricegroup">Adults</div>
+            <div class="priceitem">
+                <div class="pricedesc">Ab 15 Jahren</div>
+                <div class="price-amount">4,90 €</div>
+            </div>
+        </div>
+        <div class="pseni gridprices">
+            <div class="symbolprice"></div>
+            <div class="pricegroup">Seniors</div>
+            <div class="priceitem">
+                <div class="pricedesc">Ab 15 Jahren</div>
+                <div class="price-amount">4,90 €</div>
+            </div>
+        </div>
+        <div class="happyhour gridprices">
+            <div class="pricegroup">Happy hour</div>
+            <p>Von Dienstag bis Donnerstag, ab 18 Uhr.</p>
+            <div class="priceitem comprimized">
+                <div class="pricedesc">Kids</div>
+                <div class="price-amount">6,90 €</div>
+            </div>
+            <div class="priceitem comprimized">
+                <div class="pricedesc">Adults</div>
+                <div class="price-amount">3,90 €</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="specials">
+    <div class="specials-grid">
+        <div class="specoverline">
+            <h1>Specials</h1>
+            <p>Gültig außerhalb von Ferien.</p>
+        </div>
+        <div class="motherday spec">
+            <div class="specpic" style="background-image:url({% static 'img/jungefrau.png'%})"></div>
+            <div class="whichday">Dienstags</div>
+            <h3>Mother's day</h3>
+            <p>Lorem Ipsum eu di teun dehun. Ud a Nemun.</p>
+
+        </div>
+        <div class="f1day spec">
+            <div class="specpic" style="background-image:url({% static 'img/lambo.jpg'%})"></div>
+            <div class="whichday">Dienstags</div>
+            <h3>Formula 1 day</h3>
+            <p>Coole GoKart Rennen in unserer eignen Rennbahn. Fahre jetzt gegen deine Freunde.</p>
+
+        </div>
+        <div class="fatherday spec">
+            <div class="specpic" style="background-image:url({% static 'img/vater.png'%})"></div>
+            <div class="whichday">Dienstags</div>
+            <h3>Father's day</h3>
+            <p>Lorem Ipsum eu di teun dehun. Ud a Nemun.</p>
+        </div>
+    </div>
+</div>
+
+<div class="openings">
+    <div class="openingtableregular">
+        <h2>Opening times</h2>
+        <div class="dayitem">
+            <div class="day">Monday</div>
+            <div class="time">10:00-18:00</div>
+        </div>
+        <div class="dayitem">
+            <div class="day">Tuesday</div>
+            <div class="time">10:00-18:00</div>
+        </div>
+        <div class="dayitem">
+            <div class="day">Wednesday</div>
+            <div class="time">10:00-18:00</div>
+        </div>
+        <div class="dayitem">
+            <div class="day">Friday</div>
+            <div class="time">10:00-18:00</div>
+        </div>
+        <div class="dayitem">
+            <div class="day">Saturday</div>
+            <div class="time">10:00-18:00</div>
+        </div>
+        <div class="dayitem">
+            <div class="day">Sunday</div>
+            <div class="time">10:00-18:00</div>
+        </div>
+    </div>
+    
+</div>
+
+
+{% endblock content %}
+{% block jsfiles %}
+<script src="{% static 'js/observerPrices.js'%}"></script>
+{% endblock jsfiles %}

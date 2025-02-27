@@ -1,0 +1,197 @@
+/*
+
+font-family: 'Courgette', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Water Brush', cursive;
+
+*/
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden !important;
+
+
+}
+
+
+
+
+
+.fullcont {
+    overflow-x: hidden;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+
+.footer {
+    width: 100%;
+    height: auto;
+    background-color: #f6f6f6;
+}
+
+.regularbtn {
+    width: 180px;
+    border-radius: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 59px;
+    background-color: #FF1292;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+}
+
+
+
+
+
+.footgrid {
+    display: grid;
+    max-width: 920px;
+    padding-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 120px 100px 100px;
+    grid-template-areas:
+        "fo1"
+        "fo2"
+        "fo3"
+        "fo4";
+
+}
+
+
+.fo1 {
+    grid-area: fo1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.fo1 h3 {
+    font-weight: 400;
+    font-size: 0.9em;
+
+}
+
+
+.horizontalFlex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footerlogo {
+    width: 200px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.socialwrap {
+    width: 30px;
+    height: 30px;
+    border-radius: 200px;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+
+}
+
+.socialwrap:hover {
+    opacity: 0.7;
+    transition: 340ms;
+    cursor: pointer;
+
+}
+
+.socialicon {
+    width: 17px;
+    height: 17px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+
+}
+
+.fo2 {
+    grid-area: fo2;
+}
+
+.fo3 {
+    grid-area: fo3;
+}
+
+.fo4 {
+    grid-area: fo4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eaeaea;
+
+}
+
+.copyright {
+    font-size: 0.7em;
+
+
+}
+
+.developed {
+    font-size: 0.6em;
+}
+
+.racinename {
+    font-size: 0.7em;
+}
+
+.linklines {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+
+}
+
+.linklines a {
+    text-decoration: none;
+    color: darkgray;
+    font-size: 0.8em;
+    margin: 20px;
+}
+
+.mrgntop {
+    margin-top: 55px;
+}
+
+@media(max-width:780px) {
+
+
+    .footgrid {
+        max-width: 90%;
+    }
+
+
+    .regularbtn {
+        width: 165px;
+        height: 48px;
+        font-size: 0.8em;
+    }
+
+}
